@@ -1,42 +1,37 @@
-for pykaraoke (https://github.com/kelvinlawson/pykaraoke):
+# README
 
-need homebrew installed and updated / upgraded
+need to create postgres db:
 
-first install pygame:
+createdb -E UTF8 -T template0 api_server_dev
 
-make sure homebrew python is installed:
+start server:
 
-brew install python
-brew link --overwrite python
+rails server -b 0.0.0.0 -p 3030
 
-brew install sdl sdl_image sdl_mixer sdl_ttf portmidi  //might be unncessesary?
-pip install https://bitbucket.org/pygame/pygame/get/default.tar.gz
 
-then wxpython (for playing KAR files):
 
-brew install wxpython
+FIRST TIME:
+seed db with queues: 
+[1,2,3,4,5,6].each {|room| SongQueues.new({room: room}).save}
 
-and scipy (for CDG files):
+To generate a new API key for the web app.
+a = ApiKey.create
+a.access_token
+#copy resultant hash to production servers as needed!
+for ex: heroku config:set ONSITE_API_KEY="access_token_goes_here"
 
-brew install scipy
+api key use:
+HTTParty example:
+headers: {"Authorization" => "Token token=\"111\""}
+headers: {authorization: "Token token=#{ENV['ONSITE_API_KEY']}")
 
-git clone https://github.com/kelvinlawson/pykaraoke.git
 
-download pygame source for dev headers: http://www.pygame.org/download.shtml
-edit setup.cfg - change last line to read:
-include_dirs = /usr/local/include/SDL/:/usr/local/include/python2.7/
 
-compile:
 
-sudo python setup.py install
 
-brew uninstall libvorbis libogg # if you have them installed
-brew reinstall sdl_mixer --with-libvorbis
+* /custom_kjams_files
 
-run with
+Replace the XML files in /Library/preferences/kjams/Producer Templates
+Replace the rotation_background.png in /Library/preferences/kjams/Producer Templates/pix
+Mimic the settings in kjams_settings.png
 
-pythonw pykaraoke.py
-
-for command line operation:
-
-pythonw pycdg.py ~/Projects/karaoke_bar/KAROAKE\ FILES/CBSE/\(Duets\)\ Garth\ Brooks\ With\ George\ Jones\ -\ Beer\ Run\ -\ CBSE.cdg
