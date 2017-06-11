@@ -1,0 +1,69 @@
+kScriptCommand_NONE,
+kScriptCommand_PLAY_PAUSE,
+kScriptCommand_STOP,
+kScriptCommand_BACK_REWIND,
+kScriptCommand_NEXT,
+kScriptCommand_VOL_UP,
+kScriptCommand_VOL_DOWN,
+kScriptCommand_VOL_MUTE,
+kScriptCommand_PITCH_UP,
+kScriptCommand_PITCH_DOWN,
+kScriptCommand_PITCH_NORMAL,
+kScriptCommand_SAVE,
+kScriptCommand_TEMPO_UP,
+kScriptCommand_TEMPO_DOWN,
+kScriptCommand_TEMPO_NORMAL,
+kScriptCommand_FULL_SCREEN,
+kScriptCommand_CAM_POWER,
+kScriptCommand_CAM_SHOOT,
+kScriptCommand_CRASH,
+kScriptCommand_RESCAN_VENUE,
+kScriptCommand_SHOW_ROTATION,
+kScriptCommand_HIDE_SHOWSCREEN,
+kScriptCommand_IS_SHOWSCREEN_SHOWING,
+kScriptCommand_GET_SHOW_ROTATION_TIME_REMAIN,
+kScriptCommand_TOGGLE_TRANSPARENT,
+kScriptCommand_IS_TRANSPARENT,
+kScriptCommand_GET_VIDEO_DISPLAY_ID,
+kScriptCommand_GET_IND_SONG_ID,
+kScriptCommand_Prog_SetCurMax, // int cur, int max
+kScriptCommand_Prog_SetStr, // str
+kScriptCommand_Menu, // int menu, int menuItem [, int [, int]]
+kScriptCommand_GetPref, // str key
+kScriptCommand_SetPref, // str key, str val
+kScriptCommand_Server, // it's complicated
+kScriptCommand_GetMeta, // int songID
+kScriptCommand_SetMeta, // scary
+kScriptCommand_GetSelectedPlaylist,
+kScriptCommand_SetSelectedPlaylist, // int playlistID
+kScriptCommand_GetSelection, // int playlistID
+kScriptCommand_SetSelection,
+kScriptCommandStr_GetAppVersion,
+kScriptCommandStr_GetCurSongName,
+kScriptCommandStr_GetCurSongPath,
+kScriptCommandStr_GetCurSongCachePath,
+kScriptCommandStr_GetNextSongName,
+kScriptCommandStr_GetNextSongPath,
+kScriptCommandStr_GetNextSongCachePath,
+kScriptCommand_GET_PLAY_MODE,
+kScriptCommand_GET_CUR_SONG_TIME,
+kScriptCommand_ADD_TO_LIBRARY,
+kScriptCommand_EXPORT,
+kScriptCommand_GET_PLI_LIST,
+kScriptCommand_PLI_TO_SONG_ID,
+kScriptCommand_Unicode_Test,
+kScriptCommand_3ButtonDialog,
+kScriptCommand_TextDialog,
+kScriptCommand_SetKeyShortcut,
+kScriptCommand_GetVolume,
+kScriptCommand_SetVolume,
+kScriptCommand_Is_Exporting,
+kScriptCommand_Debug_GetNumFonts,
+kScriptCommand_Create_QR_Code,
+kScriptCommand_Get_ServerAddress,
+// if you add STR commands, update below Scripting_IsStringCmd
+// if you add ANY commands, update GetCmdName
+kScriptCommand_63,
+kScriptCommand_64,
+kScriptCommand_65,
+kScriptCommand_NUMTYPES

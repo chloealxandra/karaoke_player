@@ -1,0 +1,16 @@
+<h1>Rooms</h1>
+ 
+<table>
+  <tr>
+    <th>Private Room Status</th>
+    <th>"Now this is Karaoke"</th>
+  </tr>
+ 
+  <% @queues.each do |queue| %>
+    <tr>
+      <td><%= queue[0] %></td>
+      <td><%= queue[0] %></td>
+      <td><%= link_to 'Look at queue', queue_path(queue) %></td>
+    </tr>
+  <% end %>
+</table>

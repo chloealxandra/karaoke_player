@@ -1,0 +1,24 @@
+{
+  "name": "api_server",
+  "version": "1.0.0",
+  "description": "a server that passes API commands from the web to a number of kjams servers on a local network",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/themission/karaoke_player.git"
+  },
+  "author": "Jesse Mejía",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/themission/karaoke_player/issues"
+  },
+  "homepage": "https://github.com/themission/karaoke_player#readme",
+  "dependencies": {
+    "body-parser": "~1.0.1",
+    "express": "^4.14.0",
+    "request": "^2.74.0"
+  }
+}

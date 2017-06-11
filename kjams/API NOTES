@@ -1,0 +1,39 @@
+API NOTES
+all requests need to be x-www-form-urlencoded
+
+
+NEW SINGER:
+/newsinger
+
+singername=webtest&password=webtest&confirm=webtest&submit=Jam+Out%21
+
+
+LOGGING IN:
+
+/singers returns list of singers
+
+singer id is keyed as siID
+
+
+singer=[siID]&password=[password]&submit=Login
+
+http://192.168.0.26/main?singer=181832&password=poly800&submit=Login
+
+
+singer=181832&password=poly800&submit=Login
+
+LOGGING OUT:
+
+/logout
+
+SEARCHING:
+http://192.168.0.26/search?search=s
+
+ADDING TO TONIGHT QUEUE:
+after searching - need the soID key (int) ex 10463
+
+http://192.168.0.26/drop?playlist=[siID]&song=[soID]
+
+repitching a song that's in a playlist:
+
+http://192.168.0.26/pitch?song[soID]&pitch[signed int]

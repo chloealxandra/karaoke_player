@@ -1,0 +1,2 @@
+class SongQueue < ApplicationRecord
+end
